@@ -1,0 +1,18 @@
+<template name="blog">
+  <div class="page blog">
+    {{> nav title='My muse' black=true}}
+
+    <div class="content-scrollable">
+      <div class="list-blog">
+        {{#each this}}
+          {{#if highlighted}}
+            {{> postItem post=this size='large'}}
+          {{else}}
+            {{> postItem post=this size='small'}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+
+  </div>
+</template>
